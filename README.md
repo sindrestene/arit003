@@ -10,9 +10,11 @@ If the prediction of the odds is good, the cost of storing the bit goes down. In
 
 During the implementation, first I decided on a minimum acceptable storage overhead, then made no compromises regarding the encoding/decoding speed.
 Choices that have been tuned:
-* Number of remaining bits in x1/x2 before 
+* Number of remaining bits in x1/x2 before pushing out the buffer
+* Size to push out at one time
+* Resolution of the odds
 
-For the reader, if you look at arit003_encode_bit() and arit003_decode_bit(), you may see how they match step-by-step.
+For the reader, i recommend looking at `arit003_encode_bit()` and `arit003_decode_bit()`, you may see how they match step-by-step.
 
 ## build
 ```
